@@ -35,11 +35,10 @@ Caso digite um Id Inexistente a API mandara uma mensagem de erro.
 ##Para Realizar uma paginacao entre os clientes Usar o Metódo Get na url
 http://localhost:8080/clientes
 
-é necessario passar um dos dois parametros para que funcione,
-## o atributo nome ou o atributo logradouro, na url ficaria assim: 
+é necessario passar um dos dois parametros para que funcione,o atributo nome ou o atributo logradouro, na url ficaria assim: 
 
-http://localhost:8080/clientes?nome=nomeTeste
-ou
+http://localhost:8080/clientes?nome=nomeTeste  
+ou  
 http://localhost:8080/clientes?logradouro=Rua Exemplo da silva
 
 
