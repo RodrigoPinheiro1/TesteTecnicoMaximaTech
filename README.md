@@ -11,16 +11,20 @@ EndPoint para fazer as requisições (http://localhost:8080/clientes)
 
 #Para Cadastro de cliente Metodo Post passar o corpo da requisição em json:
 
-{
- "nome":"xandao",
-  "codigo":"1516",
-  "cpnj":"15.436.940/0001-03",
-    "endereco":{
-    "cep":"01025020",
+{  
+
+ "nome":"xandao",    
+  "codigo":"1516",  
+  "cpnj":"15.436.940/0001-03",  
+    "endereco":{  
+    "cep":"01025020", 
     "complemento":"apto 47",
     "numero":"331"
     }     
+    
 }
+
+
 o cep ira trazer todas as outras informações de endereço.
 Caso se digite o cnpj errado ou algum campo obrigatorio faltar a API mandara uma mensagem de erro.
 
