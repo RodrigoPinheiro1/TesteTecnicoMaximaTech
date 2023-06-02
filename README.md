@@ -30,11 +30,11 @@ o cep ira trazer todas as outras informações de endereço.
 Caso se digite o cnpj errado ou algum campo obrigatorio faltar a API mandara uma mensagem de erro.
 
 ### Para Atualizar cliente Metodo Put passar o mesmo corpo da requisição do cadastro mais com a url passando o Id exemplo. 
-http://localhost:8080/clientes/1)
+http://localhost:8080/clientes/1)  
 Caso digite um Id Inexistente a API mandara uma mensagem de erro.
 
-### Para Realizar uma paginacao entre os clientes Usar o Metódo Get na url
-http://localhost:8080/clientes
+### Para Realizar uma paginacao entre os clientes Usar o Metódo Get na url  
+http://localhost:8080/clientes  
 
 é necessario passar um dos dois parametros para que funcione,o atributo nome ou o atributo logradouro, na url ficaria assim: 
 
