@@ -3,7 +3,7 @@
 Sistema de Cadastrado de cliente junto com endereço, existe validações de campos com Cnpj, e Cep.  
 para buscar o cep esta sendo usada uma api externa chamada viaCep  
 
-### obs: para rodar aplicação com o rodar rodar o comando:
+### obs: para rodar aplicação com o Docker rodar o comando:
 build --build-arg JAR_FILE=target/*.jar -t myorg/myapp .
 
 Banco de Dados H2, em memória.
