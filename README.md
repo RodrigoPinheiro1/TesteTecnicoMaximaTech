@@ -1,8 +1,8 @@
 # TesteTecnicoMaximaTech
 
-sistema de Cadastrado de cliente junto com endereço, existe validações de campos com Cnpj, e Cep.
+Sistema de Cadastrado de cliente junto com endereço, existe validações de campos com Cnpj, e Cep.
 
-# para buscar o cep esta sendo usada uma api externa chamada viaCep
+## para buscar o cep esta sendo usada uma api externa chamada viaCep
 
 
 Banco de Dados H2, em memória.
