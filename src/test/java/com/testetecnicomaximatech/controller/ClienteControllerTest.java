@@ -38,20 +38,17 @@ class ClienteControllerTest {
     private ClienteRepository clienteRepository;
 
 
-
     private Cliente cliente;
 
     private ClienteDto clienteDto;
 
     private EnderecoDto enderecoDto;
 
-
     private final URI uri = URI.create("/clientes");
 
     private final URI uriId = URI.create("/clientes/");
     private final String idNotExist = "000";
     private String idString;
-
 
     @BeforeAll
     void put() {
@@ -74,7 +71,7 @@ class ClienteControllerTest {
     }
 
     @Test
-    void cadastrar() throws Exception {
+    void insertWithCorrectCnpjAndCep() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.post(uri)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -83,18 +80,43 @@ class ClienteControllerTest {
     }
 
     @Test
-    void atualizar() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.put(uriId+idString)
+    void insertWithWrongCnpjAndCep() throws Exception {
+
+        clienteDto.setCpnj("2138923109213");
+        enderecoDto.setCep("12345");
+
+        mockMvc.perform(MockMvcRequestBuilders.post(uri)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(clienteDto)))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+
+
+    }
+
+    @Test
+    void updateWithCorrectCnpjAndCep() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.put(uriId + idString)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(clienteDto)))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     @Test
+    void updateWithWrongCnpjAndCep() throws Exception {
+        clienteDto.setCpnj("2138923109213");
+        enderecoDto.setCep("12345");
+
+        mockMvc.perform(MockMvcRequestBuilders.put(uriId + idString)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(clienteDto)))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
+
+    @Test
     void paginacao() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders.get(uri)
-                .param("nome","xandao"))
+                        .param("nome", "xandao"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
 }
