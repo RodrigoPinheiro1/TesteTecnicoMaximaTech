@@ -1,17 +1,16 @@
 # TesteTecnicoMaximaTech
 
-Sistema de Cadastrado de cliente junto com endereço, existe validações de campos com Cnpj, e Cep.
+Sistema de Cadastrado de cliente junto com endereço, existe validações de campos com Cnpj, e Cep.  
+para buscar o cep esta sendo usada uma api externa chamada viaCep  
 
-## para buscar o cep esta sendo usada uma api externa chamada viaCep
-
-obs: para rodar aplicação com o rodar rodar o comando:
+### obs: para rodar aplicação com o rodar rodar o comando:
 build --build-arg JAR_FILE=target/*.jar -t myorg/myapp .
 
 Banco de Dados H2, em memória.
 
 EndPoint para fazer as requisições (http://localhost:8080/clientes)
 
-# Para Cadastro de cliente Metodo Post passar o corpo da requisição em json:
+### Para Cadastro de cliente Metodo Post passar o corpo da requisição em json:
 
 {  
 
@@ -30,11 +29,11 @@ EndPoint para fazer as requisições (http://localhost:8080/clientes)
 o cep ira trazer todas as outras informações de endereço.
 Caso se digite o cnpj errado ou algum campo obrigatorio faltar a API mandara uma mensagem de erro.
 
-## Para Atualizar cliente Metodo Put passar o mesmo corpo da requisição do cadastro mais com a url passando o Id exemplo. 
+### Para Atualizar cliente Metodo Put passar o mesmo corpo da requisição do cadastro mais com a url passando o Id exemplo. 
 http://localhost:8080/clientes/1)
 Caso digite um Id Inexistente a API mandara uma mensagem de erro.
 
-## Para Realizar uma paginacao entre os clientes Usar o Metódo Get na url
+### Para Realizar uma paginacao entre os clientes Usar o Metódo Get na url
 http://localhost:8080/clientes
 
 é necessario passar um dos dois parametros para que funcione,o atributo nome ou o atributo logradouro, na url ficaria assim: 
