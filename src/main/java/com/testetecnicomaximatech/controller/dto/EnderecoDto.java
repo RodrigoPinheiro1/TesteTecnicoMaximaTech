@@ -6,8 +6,10 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class EnderecoDto {
 
     @NotBlank
@@ -28,5 +30,9 @@ public class EnderecoDto {
     private String ddd;
     private String siafi;
 
-
+    public EnderecoDto(String cep, String complemento, String numero) {
+        this.cep = cep;
+        this.complemento = complemento;
+        this.numero = numero;
+    }
 }

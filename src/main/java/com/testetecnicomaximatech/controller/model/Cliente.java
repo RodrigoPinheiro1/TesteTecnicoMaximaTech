@@ -32,4 +32,10 @@ public class Cliente {
     @Embedded
     private Endereco endereco;
 
+    public Cliente(String nome, String codigo, String cpnj, Endereco endereco) {
+        this.nome = nome;
+        this.codigo = codigo;
+        this.cpnj = cpnj;
+        this.endereco = endereco;
+    }
 }
