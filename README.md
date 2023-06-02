@@ -16,10 +16,10 @@ EndPoint para fazer as requisições (http://localhost:8080/clientes)
  "nome":"xandao",    
   "codigo":"1516",  
   "cpnj":"15.436.940/0001-03",  
-    "endereco":{  
-    "cep":"01025020", 
-    "complemento":"apto 47",
-    "numero":"331"
+    "endereco": {  
+    "cep":"01025020",   
+    "complemento":"apto 47",  
+    "numero":"331"  
     }     
     
 }
