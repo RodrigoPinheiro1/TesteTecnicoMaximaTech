@@ -39,9 +39,9 @@ public class ClienteController {
     }
 
     @GetMapping
-    public Page<ClienteDto>paginacao(@RequestParam(required = false) String nome, @RequestParam(required = false) String rua, Pageable pageable) {
+    public Page<ClienteDto>paginacao(@RequestParam(required = false) String nome, @RequestParam(required = false) String logradouro, Pageable pageable) {
 
-      return clienteService.paginacao(nome,rua,pageable);
+      return clienteService.paginacao(nome,logradouro,pageable);
     }
 
 }

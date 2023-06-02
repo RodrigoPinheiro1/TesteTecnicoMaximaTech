@@ -42,10 +42,9 @@ public class ClienteServiceImplemts implements ClienteService {
     }
 
     @Override
-    public Page<ClienteDto> paginacao(String nome, String rua, Pageable pageable) {
-
-        return clienteRepository.findByNomeOrEndereco_Logradouro(nome, rua, pageable).map(cliente -> modelMapper.map(cliente, ClienteDto.class));
-
+    public Page<ClienteDto> paginacao(String nome, String logradouro, Pageable pageable) {
+        return clienteRepository.findByNomeOrEndereco_Logradouro(nome, logradouro, pageable)
+                .map(cliente -> modelMapper.map(cliente, ClienteDto.class));
     }
 
     @Override
