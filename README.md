@@ -4,6 +4,8 @@ Sistema de Cadastrado de cliente junto com endereço, existe validações de cam
 
 ## para buscar o cep esta sendo usada uma api externa chamada viaCep
 
+obs: para rodar aplicação com o rodar rodar o comando:
+build --build-arg JAR_FILE=target/*.jar -t myorg/myapp .
 
 Banco de Dados H2, em memória.
 
